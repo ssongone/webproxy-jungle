@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더하기 페이지</title>
+    <script>
+        function sum() {
+            var num1 = document.getElementById("param1").value;
+            var num2 = document.getElementById("param2").value;
+            window.location.href = "cgi-bin/adder?"+num1+"&"+num2;
+        }
+    </script>
+</head>
+<body>
+첫 번째 숫자를 입력하세요: <input id="param1"></input>
+<br>
+두 번째 숫자를 입력하세요: <input id="param2"></input>
+<br>
+<button onclick="sum()">계산하기</button> 
+<div class="res">결과값</div>
+
+
+</body>
+</html>
