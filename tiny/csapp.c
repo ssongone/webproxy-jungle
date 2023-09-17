@@ -151,6 +151,7 @@ pid_t Getpgrp(void) {
 /* $begin sigaction */
 handler_t *Signal(int signum, handler_t *handler) 
 {
+    //<signal.h>에 있나??
     struct sigaction action, old_action;
 
     action.sa_handler = handler;  
@@ -1060,7 +1061,7 @@ int Open_listenfd(char *port)
     int rc;
 
     if ((rc = open_listenfd(port)) < 0)
-	unix_error("Open_listenfd error");
+	    unix_error("Open_listenfd error");
     return rc;
 }
 
